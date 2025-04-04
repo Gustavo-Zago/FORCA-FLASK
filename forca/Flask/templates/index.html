@@ -25,7 +25,7 @@
             <a href="{{ url_for('reset') }}">Jogar novamente</a>
         {% else %}
             <form method="post">
-                <input type="text" name="letra" maxlength="1" pattern="[A-Za-z]" required>
+                <input type="text" name="letra" maxlength="1" pattern="[A-Za-z]" required autocomplete="off">
                 <button type="submit">Enviar</button>
             </form>
         {% endif %}
