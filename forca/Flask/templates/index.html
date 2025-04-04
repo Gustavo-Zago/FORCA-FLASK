@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Jogo da Forca</title>
+</head>
+<body>
+    <main>
+        <h1>Jogo da Forca</h1>
+
+        <img width="400px" height="200px" src="{{ url_for('static', filename='img/' + imagem) }}" alt="Forca">
+
+        <h2>
+            {% for l in exibicao %}
+                <span class="letra">{{ l }}</span>
+            {% endfor %}
+        </h2>
+
+        <p>Letras erradas: {{ erros | join(", ") }}</p>
+
+        {% if status %}
+            <h2>{{ status }}</h2>
+            <a href="{{ url_for('reset') }}">Jogar novamente</a>
+        {% else %}
+            <form method="post">
+                <input type="text" name="letra" maxlength="1" pattern="[A-Za-z]" required>
+                <button type="submit">Enviar</button>
+            </form>
+        {% endif %}
+    </main>
+</body>
+</html>
