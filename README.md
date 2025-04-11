@@ -15,6 +15,13 @@ Um simples jogo da forca feito com Python e Flask, executado no navegador. O obj
 
 ---
 
+## 📸 Demonstração
+
+![Screenshot do projeto](/Forca.jpeg)
+
+> Também tem um vídeo do projeto em ação!  
+> [🎥 Assista aqui](/jogoforca.mp4)
+
 ## 🚀 Como Rodar
 
 ### 🔧 Pré-requisitos
